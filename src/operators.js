@@ -1,6 +1,6 @@
 export async function fetchTabs(category, page) {
   const tabs = await fetch(
-    `https://www.tabnews.com.br/api/v1/contents?strategy=${category}&page=${page}`
+    `https://www.tabnews.com.br/api/v1/contents?strategy=${category}&page=${page}&per_page=100`
   );
 
   const posts = await tabs.json();
